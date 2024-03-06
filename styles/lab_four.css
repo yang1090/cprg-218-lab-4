@@ -1,0 +1,202 @@
+/* general style */
+body {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+    font-kerning: none;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/banner.jpg);
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0%;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: white;
+}
+/* end of general style */
+
+/* content style */
+.content-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    background-color: white;
+}
+
+.content-header {
+    padding-bottom: 3rem;
+}
+
+.content-container h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+    text-align: center;
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+    line-height: 1.3;
+    margin-bottom: 3rem;
+}
+
+button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: solid 1px black;
+    color: black;
+    background: white;
+    font-size: 0.8rem;
+}
+
+button:hover {
+    transition: all 0.4s ease;
+    border: solid 1px #fc7753;
+    color: #fc7753;
+}
+
+.content-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* end of content style */
+
+/* accordion style */
+.accordion-container h2 {
+    text-align: center;
+    font-weight: 100;
+    margin-top: 0;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.accordion {
+    background-color: #fc7753;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 2rem;
+    padding-left: 4rem;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 0;
+    text-align: left;
+    font-size: 1rem;
+    transition: 0.4s;
+  }
+ 
+.active, .accordion:hover {
+    background-color: #ac4d32;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 0;
+}
+  
+.panel {
+    background-color: #fc7753;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+  
+.accordion-container p {
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    color: white;
+}
+/* end of accordion style */
+
+/* footer style */
+.footer-container h2 {
+    text-align: center;
+    font-weight: 100;
+    margin: 0;
+    padding-top: 5rem;
+    background-color: black;
+    color: white;
+}
+
+.footer-container {
+    height: auto;
+}
+
+.footer {
+    background:black;
+    padding: 3rem;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align:center;
+}
+
+.footer .row {
+    margin: 2rem;
+    padding:0.6% 0%;
+    color:gray;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    padding: 0;
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
