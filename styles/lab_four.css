@@ -120,6 +120,7 @@ button:hover {
     cursor: pointer;
     padding: 2rem;
     padding-left: 4rem;
+    padding-right: 4rem;
     width: 100%;
     border: none;
     border-bottom: 2px solid white;
@@ -136,6 +137,17 @@ button:hover {
     border-bottom: 2px solid white;
     border-radius: 0;
 }
+
+.accordion:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
   
 .panel {
     background-color: #fc7753;
@@ -154,49 +166,71 @@ button:hover {
 /* end of accordion style */
 
 /* footer style */
+.footer-container {
+    background-color: white;
+}
+
 .footer-container h2 {
     text-align: center;
     font-weight: 100;
     margin: 0;
     padding-top: 5rem;
-    background-color: black;
-    color: white;
-}
-
-.footer-container {
-    height: auto;
+    padding-bottom: 5rem;
+    color: black;
 }
 
 .footer {
-    background:black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 3rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
     font-family: Helvetica, Arial, sans-serif;
     text-align:center;
 }
 
-.footer .row {
-    margin: 2rem;
-    padding:0.6% 0%;
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+  }
+  
+  .google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+
+.footer .copyright {
+    padding-top: 5rem;
     color:gray;
     font-size: 0.8em;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .footer .row a {
+    color:gray;
+    font-size: 0.8em;
     text-decoration: none;
-    color: gray;
-    transition: 0.5s;
 }
 
 .footer .row a:hover {
-    color: #fff;
+    color: black;
+    font-weight: 400;
+    transition: 0.5s;
 }
 
 .footer .row ul {
-    padding: 0;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: left;
 }
 
 .footer .row ul li {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     margin: 0px 30px;
 }
