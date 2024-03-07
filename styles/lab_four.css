@@ -8,6 +8,12 @@ h1, h2, h3 {
     font-kerning: none;
 }
 
+.container {
+    margin: 0;
+    max-width: fit-content;
+    padding: 0;
+}
+
 .hero-container {
     display: flex;
     flex-direction: column;
@@ -139,14 +145,14 @@ button:hover {
 }
 
 .accordion:after {
-    content: '\002B';
+    content: '\2193';
     color: white;
     font-weight: bold;
     float: right;
   }
   
   .active:after {
-    content: "\2212";
+    content: "\2191";
   }
   
 .panel {
@@ -173,7 +179,8 @@ button:hover {
 .footer-container h2 {
     text-align: center;
     font-weight: 100;
-    margin: 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
     color: black;
