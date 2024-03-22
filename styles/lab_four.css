@@ -17,7 +17,7 @@ h1, h2, h3 {
 .hero-container {
     display: flex;
     flex-direction: column;
-    background-image: url(../img/banner.jpg);
+    background-image: linear-gradient(rgba(60, 60, 60, 0.5), rgba(43, 43, 43, 0.5)), url(../img/banner.jpg);
     height: 80vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
-    h1 {
+    .hero-container h1 {
     text-align: center;
     }
 }
@@ -74,7 +74,18 @@ h3 {
     margin-bottom: 30px;
 }
 
-.content-text {
+.content-text1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+    text-align: center;
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+.content-text2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,12 +100,6 @@ p {
     font-weight: lighter;
     line-height: 1.3;
     margin-bottom: 3rem;
-}
-
-@media only screen and (max-width: 768px) {
-    p {
-        font-size: 0.8rem;
-    }
 }
 
 button {
@@ -120,10 +125,27 @@ button:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+@media only screen and (max-width: 768px) {
+    .content-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2 {
+        margin: 0;
+    }
 }
 /* end of content style */
 
 /* accordion style */
+.accordion-container {
+    height: auto;
+}
+
 .accordion-container h2 {
     text-align: center;
     font-weight: 100;
@@ -139,8 +161,6 @@ button:hover {
     font-weight: 600;
     cursor: pointer;
     padding: 2rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
     width: 100%;
     border: none;
     border-bottom: 2px solid white;
@@ -148,8 +168,10 @@ button:hover {
     text-align: left;
     font-size: 1rem;
     transition: 0.4s;
+    display: grid;
+    grid-template-columns: 8fr 1fr;
 }
- 
+
 .active, .accordion:hover {
     background-color: #ac4d32;
     color: white;
@@ -164,6 +186,7 @@ button:hover {
     content: '\f103';
     color: white;
     float: right;
+    padding-left: 2rem;
 }
   
   .active:after {
@@ -171,7 +194,7 @@ button:hover {
 }
   
 .panel {
-    background-color: #fc7753;
+    background-color: #ac4d32;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -256,3 +279,23 @@ button:hover {
     flex-direction: column;
     margin: 0px 30px;
 }
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-container h2 {
+        padding-bottom: 0.5rem;
+    }
+
+    .footer-container ul li {
+        text-align: center;
+    }
+
+    .footer-container ul {
+        padding-bottom: 3rem;
+    }
+}
+/* end of footer style */
